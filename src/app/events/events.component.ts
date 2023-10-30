@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent {
+
+  eventReceived: String ="";
   event={
     id : 1,
     name : 'Angular Component',
@@ -17,5 +19,9 @@ export class EventsComponent {
       city: 'Bangalore,',
       country: 'India'
     }
+  }
+
+  handleEventClicked(data:any){
+    this.eventReceived=data
   }
 }
