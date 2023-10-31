@@ -6,10 +6,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./event-thumbnail.component.css']
 })
 export class EventThumbnailComponent {
-  @Input() event:any
+  @Input() event1:any
   @Output() eventClick = new EventEmitter();
 
   handleClickMe(){
-    this.eventClick.emit(this.event.name)
+    this.eventClick.emit(this.event1.name)
   }
 }

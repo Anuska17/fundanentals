@@ -1,6 +1,10 @@
 <div>
     <h1>Upcoming Angular Events</h1>
     <hr/>
-    <app-event-thumbnail [event]="event" (eventClick)="handleEventClicked($event)"></app-event-thumbnail>
-    <span>{{eventReceived}}</span>
+    <div class="text-center"><span *ngIf ="eventReceived" class="pad-left">{{eventReceived}}</span></div>
+    <div class ="col">
+        <div *ngFor="let event of events" class="col-md-6">
+            <app-event-thumbnail [event1]="event" (eventClick)="handleEventClicked($event)"></app-event-thumbnail>
+        </div>
+    </div>
 </div>

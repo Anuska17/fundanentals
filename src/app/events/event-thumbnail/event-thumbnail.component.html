@@ -1,12 +1,11 @@
 <div class="well hoverwell thumbail">
-    <h2>{{event.name}}</h2>
-    <div>Date: {{event.date}}</div>
-    <div>Time: {{event.time}}</div>
-    <div>Price: Rs {{event.price}}</div>
-    <div>
-        <span>Location: {{event.location.address}}</span>
-        <span>&nbsp;</span>
-        <span>{{event.location.city}} </span><span>{{event.location.country}}</span>
+    <h2>{{event1.name}}</h2>
+    <div>Date: {{event1.date}}</div>
+    <div>Time: {{event1.time}}</div>
+    <div>Price: Rs {{event1.price}}</div>
+    <div *ngIf="event1.location">
+        <span>Location: {{event1.location.address}}</span>
+        <span>{{event1.location.city}} </span><span>{{event1.location.country}}</span>
     </div>
     <button class="btn btn-primary" (click)="handleClickMe()">ClicK Me!</button>
 </div>

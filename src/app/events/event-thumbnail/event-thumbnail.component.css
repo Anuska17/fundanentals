@@ -1,0 +1,7 @@
+.well div{
+    color:#bbb;
+}
+
+.well{
+    min-height:250px !important;
+}
