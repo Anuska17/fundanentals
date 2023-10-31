@@ -17,7 +17,7 @@ export class EventsComponent {
       price: 599.99,
       imageUrl: '/assets/images/angularconnect-shield.png',
       location: {
-        address: '1057 DT,',
+        address: '1057 DT, ',
         city: 'London,',
         country: 'England'
       },
@@ -95,7 +95,7 @@ export class EventsComponent {
       price: 950.00,
       imageUrl: '/assets/images/ng-nl.png',
       location: {
-        address: 'The NG-NL Convention Center & Scuba Shop,',
+        address: 'The NG-NL Convention Center & Scuba Shop, ',
         city: 'Amsterdam,',
         country: 'Netherlands'
       },
@@ -155,7 +155,7 @@ export class EventsComponent {
       price: 759.00,
       imageUrl: '/assets/images/ng-conf.png',
       location: {
-        address: 'The Palatial America Hotel,',
+        address: 'The Palatial America Hotel, ',
         city: 'Salt Lake City,',
         country: 'USA'
       },
@@ -237,7 +237,7 @@ export class EventsComponent {
       price: 800.00,
       imageUrl: '/assets/images/basic-shield.png',
       location: {
-        address: 'The UN Angular Center,',
+        address: 'The UN Angular Center, ',
         city: 'New York,',
         country: 'USA'
       },
@@ -286,7 +286,7 @@ export class EventsComponent {
       price: 400.00,
       imageUrl: '/assets/images/ng-vegas.png',
       location: {
-        address: 'The Excalibur,',
+        address: 'The Excalibur, ',
         city: 'Las Vegas,',
         country: 'USA'
       },
