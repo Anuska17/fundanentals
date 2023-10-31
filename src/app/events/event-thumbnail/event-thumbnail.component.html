@@ -1,13 +1,13 @@
 <div class="well hoverwell thumbail">
     <h2>{{event1.name}}</h2>
     <div>Date: {{event1.date}}</div>
-    <div [ngSwitch]="event1.time">
+    <div [class.green]="event1.time==='9:00 am'" [ngSwitch]="event1.time">
         Time: {{event1.time}}
         <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
         <span *ngSwitchCase="'10:00 am'">(Late Start)</span>
         <span *ngSwitchDefault>(Normal Start)</span>
     </div>
-    <div>Price: Rs {{event1.price}}</div>
+    <div [ngClass]="{bold: event1.price>600.00,green: event1.price>600.00}">Price: Rs {{event1.price}}</div>
     <div *ngIf="event1.location">
         <span>Location: {{event1.location.address}}</span>
         <span>{{event1.location.city}} </span><span>{{event1.location.country}}</span>
