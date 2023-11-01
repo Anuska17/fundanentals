@@ -6,6 +6,7 @@ import { EventsComponent } from './events/events.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
 import { NavComponent } from './nav/nav.component';
 import { SharedService } from './events/shared/shared.service';
+import { ToastrService } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { SharedService } from './events/shared/shared.service';
   imports: [
     BrowserModule
   ],
-  providers: [SharedService],
+  providers: [SharedService, ToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
