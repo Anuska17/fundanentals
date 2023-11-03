@@ -11,3 +11,8 @@
         display: none;
     }
 }
+
+li > a.active{
+    color: black;
+    font-weight: bold;
+}

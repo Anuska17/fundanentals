@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,8 +7,18 @@ import { Injectable } from '@angular/core';
 export class SharedService {
 
   constructor() { }
+  
   getEvents(){
-    return this.EVENTS
+    let subject = new Subject();
+    setTimeout(()=> {
+      subject.next(this.EVENTS);
+      subject.complete();
+    },1000)
+    return subject
+  }
+
+  getEvent(id:number){
+    return this.EVENTS.find(event => event.id===id)
   }
 
   EVENTS = [
@@ -96,11 +107,7 @@ export class SharedService {
       time: '9:00 am',
       price: 950.00,
       imageUrl: '/assets/images/ng-nl.png',
-      location: {
-        address: 'The NG-NL Convention Center & Scuba Shop, ',
-        city: 'Amsterdam,',
-        country: 'Netherlands'
-      },
+      onlineUrl:'https://angular.io/',
       sessions: [
         {
           id: 1,

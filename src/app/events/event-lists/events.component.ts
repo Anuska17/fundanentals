@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
-import { ToastrService } from './common/toastr.service';
-import { SharedService } from './shared/shared.service';
+import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from '../common/toastr.service';
+import { SharedService } from '../shared/shared.service';
 
 @Component({
   selector: 'app-events',
@@ -10,13 +11,12 @@ import { SharedService } from './shared/shared.service';
 export class EventsComponent implements OnInit{
 
   eventReceived: String =""
-  events: any[] = [];
+  events: any
 
-  constructor(private sharedService: SharedService,private toastrService:ToastrService){
-  }
+  constructor(private sharedService: SharedService,private toastrService:ToastrService, private route: ActivatedRoute){}
 
-  ngOnInit(){
-    this.events=this.sharedService.getEvents()
+  ngOnInit(): void {
+    this.events=this.route.snapshot.data['events']
   }
 
   handleEventClicked(data:any){
