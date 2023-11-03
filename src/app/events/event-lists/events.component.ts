@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from '../common/toastr.service';
+import { EventsM } from '../shared/events-m';
 import { SharedService } from '../shared/shared.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { SharedService } from '../shared/shared.service';
 export class EventsComponent implements OnInit{
 
   eventReceived: String =""
-  events: any
+  events: EventsM[] = [];
 
   constructor(private sharedService: SharedService,private toastrService:ToastrService, private route: ActivatedRoute){}
 

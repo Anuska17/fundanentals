@@ -9,8 +9,8 @@
     </div>
     <div [ngClass]="{bold: event1.price>600.00,green: event1.price>600.00}">Price: Rs {{event1.price}}</div>
     <div *ngIf="event1.location">
-        <span>Location: {{event1.location?.address}}</span>
-        <span>{{event1.location?.city}} </span><span>{{event1.location?.country}}</span>
+        <span>Location: {{event1.location.address}}</span>
+        <span>{{event1.location.city}} </span><span>{{event1.location.country}}</span>
     </div>
     <div *ngIf="event1.onlineUrl">Online URL: {{event1.onlineUrl}}</div>
     <button class="btn btn-primary" (click)="handleClickMe()">ClicK Me!</button>
